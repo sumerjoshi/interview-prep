@@ -1,0 +1,12 @@
+version: '3'
+services:
+  api:
+    build: .
+    hostname: "api"
+    ports:
+      - "8080:8080"
+    environment:
+      MODE: "api"
+    volumes:
+      - ./api:/app/api
+      - ./common:/app/common
